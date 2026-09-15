@@ -1,0 +1,25 @@
+@model Employee
+@{
+    ViewData["Title"] = "Add Employee";
+}
+
+<form asp-action="Create" method="post">
+    <div>
+        <label asp-for="Name"></label>
+        <input asp-for="Name" />
+    </div>
+    <div>
+        <label asp-for="Department"></label>
+        <input asp-for="Department" />
+    </div>
+    <div>
+        <label asp-for="Salary"></label>
+        <input asp-for="Salary" />
+    </div>
+    <div>
+        <label asp-for="HireDate"></label>
+        <input asp-for="HireDate" type="date" />
+    </div>
+    <button type="submit">Save</button>
+    <a href="@Url.Action("Index")">Cancel</a>
+</form>
